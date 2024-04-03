@@ -27,6 +27,5 @@ compile_commands.json
 CMakeLists.txt.user
 neovim.json
 lib
-version.h
 .tasks
 tmp
