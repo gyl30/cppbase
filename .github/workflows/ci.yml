@@ -36,6 +36,8 @@ jobs:
         boost_version: 1.83.0
         cache: "true"
         link: static
+
+    - name: Setup Boost Env
       run: |
         BOOST_DIR="${{github.workspace}}/boost/boost"
         echo "Boost dir: $BOOST_DIR"
