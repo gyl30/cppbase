@@ -33,6 +33,7 @@ add_library(${PROJECT_NAME} STATIC)
 target_sources(${PROJECT_NAME} PRIVATE 
     log.cpp
     timestamp.cpp
+    env.cpp
     )
 
 target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${SPDLOG_INCLUDE_DIRS} ${RAPIDJSON_INCLUDE_DIR})
