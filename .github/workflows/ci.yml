@@ -30,6 +30,17 @@ jobs:
             compiler: clang
 
     steps:
+    - name: Install boost
+      uses: MarkusJx/install-boost@v2.4.5
+      with:
+        boost_version: 1.83.0
+        cache: "true"
+        link: static
+      run: |
+        BOOST_DIR="${{github.workspace}}/boost/boost"
+        echo "Boost dir: $BOOST_DIR"
+        echo "CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$BOOST_DIR" >> ${GITHUB_ENV}
+
     - name: Checkout
       uses: actions/checkout@v4
 
