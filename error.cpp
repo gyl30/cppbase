@@ -1,5 +1,5 @@
 #include <cstring>
-
+#include <string>
 #include "error.h"
 
 namespace leaf
