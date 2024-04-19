@@ -50,6 +50,7 @@ target_sources(${PROJECT_NAME} PRIVATE
     env.cpp
     error.cpp
     executors.cpp
+    socket.cpp
     )
 
 target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${SPDLOG_INCLUDE_DIRS} ${RAPIDJSON_INCLUDE_DIR})
