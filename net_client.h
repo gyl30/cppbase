@@ -1,9 +1,10 @@
 #ifndef LEAF_NET_CLIENT_H
 #define LEAF_NET_CLIENT_H
 
-#include <cstdint>
+#include <queue>
 #include <vector>
 #include <memory>
+#include <cstdint>
 #include <boost/asio.hpp>
 
 namespace leaf
@@ -15,6 +16,7 @@ class net_client : public std::enable_shared_from_this<net_client>
     virtual ~net_client() = default;
 
    protected:
+    using buffer_queue = std::queue<std::shared_ptr<std::vector<uint8_t>>>;
     // 读数据回调
     // ec 错误码
     // data 数据指针
